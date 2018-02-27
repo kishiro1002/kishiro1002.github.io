@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+
+<link href='css1.css' rel='stylesheet' type='text/css'>
+
+    <meta charset="UTF-8">
+    <title>Mute Background iframe Youtube Video</title>
+    
+    <style>
+        
+        * {margin: 0;}
+
+        iframe 
+        {
+          position: fixed;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+        }
+
+        @media (min-aspect-ratio: 16/9) 
+        {
+        iframe 
+            {
+                height: 300%; top: -100%;
+            }
+        }
+
+        @media (max-aspect-ratio: 16/9) 
+        {
+            iframe 
+            {
+                width: 300%; left: -100%;
+            }
+        }
+
+    </style>
+
+    <script src="index.js">
+
+    </script>
+
+</head>
+
+<body>
+    <article>
+        
+        <div id="bg_container">
+
+        <iframe id="ytplayer"  src="https://www.youtube.com/embed/5pwMht-B46g?autoplay=1&amp;controls=0&amp;loop=1&amp;showinfo=0&amp;modestbranding=1&amp;disablekb=1&amp;enablejsapi=1&amp;playlist=PLAYLIST_ID_HERE" frameborder="0"></iframe>
+        </div>
+        
+        <script>
+            function onPlayerReady() {
+            player.playVideo();
+            player.mute();
+        }
+        </script>
+        
+        <div id="content">
+            <h6>
+                <font color: blue> October 2017</font>
+            </h6>     
+
+            <h2>    
+                <b>A 3D dragon appeared in 2017 Worlds opening ceremony</b>
+                <p> &nbsp;</p>
+                <p>      </p>
+                <p></p>At Bird Nest, Beijing, China, where Worlds 2017 
+                <p></p>take place, happened to have a 3D dragon flying around
+                <p></p>the stadium due to technology, pushing the line even
+                <p></p>further for the world
+            </h2> 
+        </div>
+        
+    </article>
+</body>
+
+</html>
